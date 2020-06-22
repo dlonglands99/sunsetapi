@@ -1,0 +1,19 @@
+<% include ("partials/header") %>
+
+<h1>Sunrise/Sunset Getter</h1>
+
+<form action="/getTimes" method="POST">
+    <label for="latitude">Latitude:</label>
+    <input id="latitude" type="text" name="latitude">
+    <label for="longitude">Longitude:</label>
+    <input id="longitude" type="text" name="longitude">
+    <button>Get times!</button>
+</form>
+
+<ul>
+    <li id="sunrise">Sunrise Time: <%= sunriseTime %></li>
+    <li id="sunset">Sunset Time: <%= sunsetTime %></li>
+    <li id="dayLength">Day Length: <%= dayLength %></li>
+</ul>
+
+<% include ("partials/footer") %>
